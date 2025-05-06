@@ -1,6 +1,8 @@
 
 import 'package:e_book_store/components/MyButton.dart';
+import 'package:e_book_store/pages/homepage/HomePage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -58,7 +60,7 @@ class WelcomePage extends StatelessWidget {
                     Text(
                       "Disclaimer",
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                          color: Theme.of(context).colorScheme.secondary,),
+                          color: Theme.of(context).colorScheme.error),
                     )
                   ],
                 ),
@@ -86,7 +88,9 @@ class WelcomePage extends StatelessWidget {
             child: 
               PrimaryButton(
                 btnName: "CONTINOUE", 
-              onTap: (){},
+              onTap: (){
+                Get.offAll(HomePage());
+              },
               ),
           )
       
