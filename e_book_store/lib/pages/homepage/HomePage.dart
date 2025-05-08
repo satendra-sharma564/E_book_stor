@@ -1,4 +1,5 @@
 
+import 'package:e_book_store/components/BookCard.dart';
 import 'package:e_book_store/models/Data.dart';
 import 'package:e_book_store/pages/homepage/widgets/AppBar.dart';
 import 'package:e_book_store/pages/homepage/widgets/CategoryWidget.dart';
@@ -86,11 +87,12 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.all(10),
             child: Column(
               children: [
-                 SizedBox(height: 10),
+                 
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -101,12 +103,24 @@ class HomePage extends StatelessWidget {
                   ),
                   )
               ],
-            )
+            ),
+            
+            SizedBox(height: 20,),
+               SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                 child: Row(
+                  children: [
+                    BookCard(),
+                    BookCard(),
+                    BookCard(),
+                    BookCard(),
+                    BookCard(),
+                  ]
+                  ),
+               ),
               ],
             ),
-          )
-         
-         
+          ),         
         ],
       ),
     );
